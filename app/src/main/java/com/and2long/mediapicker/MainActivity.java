@@ -84,9 +84,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 showPopupWindown();
                 break;
             case R.id.btn_videopicker:
-                intent = new Intent();
-                intent.setType("video/*.mp4");
-                startActivityForResult(intent, VIDEO_REQUEST);
+                /*intent = new Intent();
+                intent.setType("video*//*.mp4");
+                startActivityForResult(intent, VIDEO_REQUEST);*/
+                intent = new Intent(this, VideoPickerActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_fromgallery:
                 popupWindow.dismiss();
